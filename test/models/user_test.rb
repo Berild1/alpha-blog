@@ -17,7 +17,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "username should be unique" do
     @user.save
-    @user2 = User.new(username: "johndoe", email: "janedoe@example.com", password: "password", admin: true)
+    @user2 = User.create(username: "johndoe", email: "janedoe@example.com", password: "password", admin: true)
     assert_not @user2.valid?
   end
 
